@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tasks Saver</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/favicon.png?v=1">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="header__title">Tasks Saver</h1>
+            <h2 class="header__subtitle">What to do you want to do?</h2>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="actions__container">
+            <input type="text" class="input" id="search-filter" placeholder="Filter Tasks">
+            <label id="hide-task" class="checkbox">
+                <input type="checkbox">
+                Hide completed
+            </label>
+        </div>
+    </div>
+    <div class="container">
+        <div id="filter"></div>
+        <form id="add-tasks">
+            <input type="text" class="input" placeholder="Write Down new Task" name="newTask">
+            <button class="button">Add Task</button>
+        </form>
+    </div>
+    <script src="scrips/id-definer.js"></script>
+    <script src="scrips/todo-functions.js"></script>
+    <script src="scrips/todo-app.js"></script>
+</body>
+
+</html>
