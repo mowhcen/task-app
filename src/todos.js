@@ -1,3 +1,4 @@
+import { renderToDo } from "./views";
 import { uuidv4 } from "uuid/v4";
 // Setup the empty todos array
 const toDoList = [];
