@@ -68,7 +68,7 @@ const generateToDoDOM = (toDo) => {
     toDoEl.appendChild(button);
     button.addEventListener("click", () => {
         removeTask(toDo.id);
-        saveToDos();
+        saveTask();
         renderToDo();
     });
 

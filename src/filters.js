@@ -1,3 +1,4 @@
+import { renderToDo } from "./views";
 // Set up filters default object
 
 const filters = {
@@ -18,9 +19,8 @@ const setFilter = (updates) => {
         filters.searchText = searchFilter;
     }
 
-    if (hideTask) {
-        filters.hideCompleted = hideTask;
-    }
+    filters.hideCompleted = hideTask;
+
     renderToDo();
 };
 

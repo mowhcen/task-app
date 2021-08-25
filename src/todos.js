@@ -1,18 +1,18 @@
 import { renderToDo } from "./views";
-import { uuidv4 } from "uuid/v4";
+import uuidv4 from "uuid/v4";
 // Setup the empty todos array
-const toDoList = [];
+let toDoList = [];
 
 // loadTodos
 // Arguments: none
 // Return value: none
 const loadTasks = () => {
-    const toDoList = localStorage.getItem("toDoList");
+    const toDoListJSON = localStorage.getItem("toDoList");
 
     try {
-        toDoList ? JSON.parse(toDoListJSON) : [];
+        toDoList = toDoListJSON ? JSON.parse(toDoListJSON) : [];
     } catch (e) {
-        [];
+        toDoList = [];
     }
 };
 
