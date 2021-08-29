@@ -3,7 +3,8 @@
 
 // --
 
-import { createToDoList } from "./todos";
+import { createToDoList, loadTasks } from "./todos";
+
 import { renderToDo } from "./views";
 // Add necessary imports
 import { setFilter } from "./filters";
@@ -31,3 +32,9 @@ document.querySelector("#add-tasks").addEventListener("submit", (e) => {
 });
 
 // Bonus: Add a watcher for local storage
+window.addEventListener("storage", (e) => {
+    if (e.key === "toDoList") {
+        loadTasks();
+        renderToDo();
+    }
+});
